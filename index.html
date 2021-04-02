@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Expense Tracker</h2>
+    <div class="container">
+      <h4>Your Balance</h4>
+      <h1 id="balance">$0.00</h1>
+      <div class="inc-exp">
+        <div>
+          <h4>Income</h4>
+          <p id="money-plus" class="momey-plus">+$0.00</p>
+        </div>
+        <div>
+          <h4>Expense</h4>
+          <p id="money-dec" class="money-dec">-$0.00</p>
+        </div>
+      </div>
+      <h3>History</h3>
+      <ul class="list" id="list">
+        <!-- <li class="minus">
+          cash<span>-$500</span>
+          <button id="delete-btn">x</button>
+        </li> -->
+      </ul>
+      <h3>Add new transaction</h3>
+      <form id="form">
+        <select
+          id="selection-menu"
+          onchange="getSelectedValue()"
+          style="
+            background-color: #3a3b3c;
+            color: white;
+            padding: 10px;
+            border: 0;
+            border-radius: 1px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+              Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+              sans-serif;
+            font-size: 15px;
+          "
+        >
+          <option autofocus>---Select the type of transaction---</option>
+          <option value="Income">Income</option>
+          <option value="Expense">Expense</option>
+        </select>
+        <div class="form-control">
+          <label for="text">Text</label>
+          <input type="text" id="text" placeholder="enter text..." />
+        </div>
+        <div class="form-control">
+          <label for="amount">Amount</label>
+          <input type="number" id="amount" placeholder="enter amount..." />
+        </div>
+        <button class="btn">Add transactions</button>
+      </form>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
